@@ -31,6 +31,15 @@ class App extends React.Component {
     this.state = {even: true}
     this.handleChange =  this.handleChange.bind(this)
   }
+  
+  componentDidUpdate(){
+    if(this.state.even){
+      console.log("Odd is unmounted")
+    }else{
+      console.log("Even is unmounted")
+    }
+  }
+  
   render() {
     return (
       <div id="main">
